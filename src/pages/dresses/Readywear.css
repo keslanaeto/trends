@@ -1,0 +1,22 @@
+/* src/pages/dresses/ReadyToWear.css */
+
+.readytowear-page {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9c5d1, #fbd786);
+    min-height: 100vh;
+  }
+  
+  .readytowear-page h2 {
+    font-size: 2.5rem;
+    color: #d17c7c;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .readytowear-page p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
