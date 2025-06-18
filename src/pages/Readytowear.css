@@ -1,0 +1,254 @@
+/* Gallery container */
+.bespoke-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Individual gallery item */
+  .gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .dress-img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  /* View More button */
+  .view-btn {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 0.5rem 1rem;
+    background: #111;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+  }
+  
+  .view-btn:hover {
+    background: #e91e63;
+  }
+  
+  /* Modal backdrop */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  /* Modal box */
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.4s ease;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #111;
+  }
+  
+  /* Modal image grid */
+  .modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-images img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  }
+  
+  .modal-images img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Description */
+  .modal-content p {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 1rem;
+  }
+  
+  /* Close button */
+  .close-btn {
+    margin-top: 1.5rem;
+    background: #111;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .close-btn:hover {
+    background: #e91e63;
+  }
+  
+  /* Modal animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  } 
+  
+  /* Carousel image styling */
+  .carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Carousel buttons */
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .carousel-controls button {
+    background: #111;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-controls button:hover {
+    background: #e91e63;
+  }
+  
+  /* Responsive carousel on tablets */
+  @media screen and (max-width: 768px) {
+    .carousel-img {
+      max-height: 360px;
+    }
+  
+    .carousel-controls button {
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+    }
+  }
+  
+  /* Responsive carousel on mobile */
+  @media screen and (max-width: 480px) {
+    .carousel-img {
+      max-height: 280px;
+    }
+  
+    .carousel-controls button {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+    }
+  }
+  
+  /* Mobile phones (480px and below) */
+  @media screen and (max-width: 480px) {
+    .modal-content {
+      padding: 1rem;
+    }
+  
+    .modal-content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .modal-images img {
+      width: 120px;
+      height: 180px;
+    }
+  
+    .close-btn {
+      font-size: 0.85rem;
+      padding: 0.5rem 0.9rem;
+    }
+  
+    .view-btn {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
+    }
+  
+    .modal-content {
+      padding: 1.5rem;
+    }
+  
+    .modal-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .modal-images img {
+      width: 140px;
+      height: 200px;
+    }
+  
+    .close-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .view-btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.9rem;
+    }
+  }
+  
+  
+  
+  

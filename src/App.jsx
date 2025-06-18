@@ -3,13 +3,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Casual from './pages/dresses/Bespoke';
-import Party from './pages/dresses/ReadyWear';
-import Bridal from './pages/dresses/Bridal';
+import Footer from './components/Footer';
 import About from './pages/About';
-import Contact from './pages/Contact';
-import AllDresses from './pages/dresses/AllDresses'
-
+import Contact from './pages/Contact'
+import Bespoke from './pages/Bespoke';
+import Readytowear from "./pages/Readytowear"
+import Bridal from './pages/Bridal';
 
 
 
@@ -21,11 +20,11 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/dresses/casual" element={<Casual />} />
-        <Route path="/dresses/party" element={<Party />} />
-        <Route path='/dresses'element={<AllDresses/>} /> 
-        <Route path='/dresses/bridal' element={<Bridal/>} />
+        <Route path='/bespoke' element={<Bespoke/> }/>
+        <Route path='/readytowear' element={<Readytowear/>} />
+        <Route path='/bridal' element={<Bridal/>} />
       </Routes>
+      <Footer/>
     </>
   );
 };
