@@ -32,4 +32,21 @@
     color: #4a154b;
   }
 
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .about-content {
+    /* existing styles... */
+    animation: slideInUp 0.8s ease-out forwards;
+  }
+  
+
   
