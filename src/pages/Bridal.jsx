@@ -12,6 +12,17 @@ const clothItems = [
     description: "A flowing full-length lace bespoke dress for our client.",
   },
 
+  {
+    id: 1,
+    images: [
+      "../../images/ishiagu4.png",
+      "../../images/ishiagu3.png",
+      "../../images/ishiagu.png"
+    
+    ],
+    description: "A flowing full-length lace bespoke dress for our client.",
+  },
+
  
 ];
 

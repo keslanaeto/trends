@@ -63,19 +63,23 @@ const clothItems = [
 const Bespoke = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  const [slideDirection, setSlideDirection] = useState("slide-right");
+  
   const handleViewMore = (item) => {
     setSelectedItem(item);
     setCurrentImageIndex(0); 
+    setSlideDirection("slide-right");
   };
 
   const closeModal = () => {
     setSelectedItem(null);
     setCurrentImageIndex(0);
+    setSlideDirection("slide-right");
   };
 
   const showNextImage = () => {
     if (!selectedItem) return;
+    setSlideDirection("slide-right");
     setCurrentImageIndex((prev) =>
       prev === selectedItem.images.length - 1 ? 0 : prev + 1
     );
@@ -83,6 +87,7 @@ const Bespoke = () => {
 
   const showPrevImage = () => {
     if (!selectedItem) return;
+    setSlideDirection("slide-right");
     setCurrentImageIndex((prev) =>
       prev === 0 ? selectedItem.images.length - 1 : prev - 1
     );
